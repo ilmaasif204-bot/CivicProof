@@ -1,0 +1,648 @@
+Last login: Tue Sep 15 08:56:49 on console
+(base) ilmaasif@Ilmas-MacBook-Air ~ % mkdir civic-complaint-demo && cd civic-complaint-demo
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % mkdir civic-complaint-demo
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % cd civic-complaint-demo
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % npm init -y
+Wrote to /Users/ilmaasif/civic-complaint-demo/civic-complaint-demo/package.json:
+
+{
+  "name": "civic-complaint-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % 
+npm install --save-dev hardhat
+
+added 50 packages, and audited 51 packages in 44s
+
+15 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm warn allow-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn allow-scripts   esbuild@0.28.2 (postinstall: node install.js)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % 
+npm approve-scripts --allow-scripts-pending
+1 package has install scripts not yet covered by allowScripts:
+  esbuild@0.28.2 (postinstall: node install.js)
+
+Run `npm approve-scripts <pkg>` to allow, or `npm deny-scripts <pkg>` to deny.
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % 
+npm approve-scripts --all
+Approved esbuild:
+  added esbuild@0.28.2
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % 
+npx hardhat init
+Error HHE3: No Hardhat config file found.
+
+You can initialize a new project by running Hardhat with --init
+
+For more info go to https://hardhat.org/HHE3 or run Hardhat with --show-stack-traces
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % 
+node --version
+v24.19.0
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % 
+npm --version
+11.17.0
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % 
+npx hardhat --init
+
+ █████  █████                         ███  ███           
+░░███  ░░███                         ░███ ░███           
+ ░███   ░███   ██████  ████████   ███████ ░███████    ███
+ ░██████████  ░░░░░███░░███░░███ ███░░███ ░███░░███  ░░░░
+ ░███░░░░███   ███████ ░███ ░░░ ░███ ░███ ░███ ░███   ███
+ ░███   ░███  ███░░███ ░███     ░███ ░███ ░███ ░███  ███░
+ █████  █████░░███████ █████    ░░███████ ████ █████░░███
+░░░░░  ░░░░░  ░░░░░░░ ░░░░░      ░░░░░░░ ░░░░ ░░░░░  ░░░░
+ 
+👷 Welcome to Hardhat v3.16.0 👷
+
+✔ Where would you like to initialize the project?
+
+Please provide either a relative or an absolute path: · .
+✔ What type of project would you like to initialize? · node-test-runner-viem
+✔ Hardhat only supports ESM projects. Would you like to change "./package.json" to turn your project into ESM? (Y/n) · true
+✔ You need to install the necessary dependencies using the following command:
+npm install --save-dev "@nomicfoundation/hardhat-toolbox-viem@^5.0.7" "@nomicfoundation/hardhat-ignition@^3.1.8" "@types/node@^22.8.5" "forge-std@foundry-rs/forge-std#v1.16.2" "typescript@~6.0.3" "viem@^2.47.6"
+
+Do you want to run it now? (Y/n) · true
+Do you want to run it now? (Y/n) › true
+
+npm install --save-dev "@nomicfoundation/hardhat-toolbox-viem@^5.0.7" "@nomicfoundation/hardhat-ignition@^3.1.8" "@types/node@^22.8.5" "forge-std@foundry-rs/forge-std#v1.16.2" "typescript@~6.0.3" "viem@^2.47.6"
+
+added 110 packages, and audited 161 packages in 39s
+
+53 packages are looking for funding
+  run `npm fund` for details
+
+11 low severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+npm warn allow-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn allow-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+✨ Dependencies installed ✨
+Give Hardhat a star on GitHub if you're enjoying it! ⭐️✨
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo %(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo %(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % cd ..
+rm -rf civic-complaint-demo
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % mkdir civic-complaint-demo && cd civic-complaint-demo
+npm init -y
+Wrote to /Users/ilmaasif/civic-complaint-demo/civic-complaint-demo/package.json:
+
+{
+  "name": "civic-complaint-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % npm install --save-dev hardhat@^2.28.0
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+
+added 223 packages, and audited 224 packages in 1m
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+18 vulnerabilities (11 low, 2 moderate, 5 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm warn allow-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn allow-scripts   keccak@3.0.4 (install: node-gyp-build || exit 0)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % npx hardhat --version
+2.29.1
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % npx hardhat init
+888    888                      888 888               888
+888    888                      888 888               888
+888    888                      888 888               888
+8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
+888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
+888    888 .d888888 888    888  888 888  888 .d888888 888
+888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
+888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
+
+👷 Welcome to Hardhat v2.29.1 👷‍
+
+✔ Hardhat project root: · /Users/ilmaasif/civic-complaint-demo/civic-complaint-demo
+✔ Do you want to add a .gitignore? (Y/n) · y
+✔ Help us improve Hardhat with anonymous crash reports & basic usage data? (Y/n) · y
+✔ Do you want to install this sample project's dependencies with npm (@nomicfoundation/hardhat-toolbox)? (Y/n) · y
+ y
+
+npm install --save-dev "@nomicfoundation/hardhat-toolbox@^6.0.0"
+(node:3886) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@5.0.15: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@8.1.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.1.7: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 364 packages, and audited 588 packages in 47s
+
+116 packages are looking for funding
+  run `npm fund` for details
+
+37 vulnerabilities (14 low, 7 moderate, 16 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm warn allow-scripts 2 packages have install scripts not yet covered by allowScripts:
+npm warn allow-scripts   keccak@3.0.4 (install: node-gyp rebuild)
+npm warn allow-scripts   secp256k1@4.0.5 (install: node-gyp-build || exit 0)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+
+✨ Project created ✨
+
+See the README.md file for some example tasks you can run
+
+Give Hardhat a star on Github if you're enjoying it! ⭐️✨
+
+     https://github.com/NomicFoundation/hardhat
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % npm approve-scripts --all
+Approved keccak:
+  added keccak@3.0.4
+Approved secp256k1:
+  added secp256k1@4.0.5
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % pwd
+/Users/ilmaasif/civic-complaint-demo/civic-complaint-demo
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % cd ../..
+(base) ilmaasif@Ilmas-MacBook-Air ~ % pwd
+/Users/ilmaasif
+(base) ilmaasif@Ilmas-MacBook-Air ~ % mv civic-complaint-demo/civic-complaint-demo civic-complaint-demo-clean
+(base) ilmaasif@Ilmas-MacBook-Air ~ % rm -rf civic-complaint-demo
+(base) ilmaasif@Ilmas-MacBook-Air ~ % mv civic-complaint-demo-clean civic-complaint-demo
+(base) ilmaasif@Ilmas-MacBook-Air ~ % cd civic-complaint-demo
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % pwd
+/Users/ilmaasif/civic-complaint-demo
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % rm -rf node_modules package-lock.json
+npm install
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@5.0.15: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@8.1.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.1.7: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 590 packages, and audited 591 packages in 53s
+
+117 packages are looking for funding
+  run `npm fund` for details
+
+37 vulnerabilities (14 low, 17 moderate, 6 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % npx hardhat --version
+2.29.1
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % ls
+contracts		hardhat.config.js	ignition		node_modules		package-lock.json	package.json		README.md		test
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % ls
+contracts		hardhat.config.js	ignition		node_modules		package-lock.json	package.json		README.md		test
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % cd contracts
+(base) ilmaasif@Ilmas-MacBook-Air contracts % ls
+Lock.sol
+(base) ilmaasif@Ilmas-MacBook-Air contracts % rm Lock.sol
+(base) ilmaasif@Ilmas-MacBook-Air contracts % ls
+(base) ilmaasif@Ilmas-MacBook-Air contracts % ls ~/Downloads | grep Complaint
+(base) ilmaasif@Ilmas-MacBook-Air contracts % ls
+(base) ilmaasif@Ilmas-MacBook-Air contracts % ls ~/Downloads | grep Complaint
+(base) ilmaasif@Ilmas-MacBook-Air contracts % ls contracts
+ls: contracts: No such file or directory
+(base) ilmaasif@Ilmas-MacBook-Air contracts % cd ~/civic-complaint-demo
+ls contracts
+
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo %  ls ~/Downloads | grep Complaint
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % cd contracts
+(base) ilmaasif@Ilmas-MacBook-Air contracts % cd ~/civic-complaint-demo/contracts
+(base) ilmaasif@Ilmas-MacBook-Air contracts % cat > ComplaintLedger.sol << 'EOF'
+heredoc> >....                                                                                                                                                                                            
+    function disputeResolution(uint256 id, string calldata reasonHash) external {
+        Complaint storage c = _getExisting(id);
+        Status current = _currentStatus(c);
+        require(
+            current == Status.ProofSubmitted || current == Status.Resolved,
+            "Can only dispute a submitted or already-resolved proof"
+        );
+        _append(c, id, Status.Disputed, "", reasonHash);
+    }
+
+    function reopen(uint256 id) external {
+        Complaint storage c = _getExisting(id);
+        Status current = _currentStatus(c);
+        require(current == Status.Disputed, "Can only reopen a disputed complaint");
+        _append(c, id, Status.Reopened, "", "");
+    }
+
+    function getHistory(uint256 id) external view returns (Event[] memory) {
+        return _getExisting(id).history;
+    }
+
+    function getCurrentStatus(uint256 id) external view returns (Status) {
+        return _currentStatus(_getExisting(id));
+    }
+
+    function getComplaintCount() external view returns (uint256) {
+        return nextComplaintId;
+    }
+
+    function _currentStatus(Complaint storage c) internal view returns (Status) {
+        return c.history[c.history.length - 1].status;
+    }
+
+    function _getExisting(uint256 id) internal view returns (Complaint storage) {
+        Complaint storage c = complaints[id];
+        require(c.exists, "Complaint does not exist");
+        return c;
+    }
+
+    function _append(
+        Complaint storage c,
+        uint256 id,
+        Status newStatus,
+        string memory evidenceHash,
+        string memory metaHash
+    ) internal {
+        c.history.push(Event({
+            status: newStatus,
+            actor: msg.sender,
+            evidenceHash: evidenceHash,
+            metaHash: metaHash,
+            blockTimestamp: block.timestamp
+        }));
+        emit StatusChanged(id, newStatus, msg.sender, block.timestamp);
+    }
+}
+EOF
+(base) ilmaasif@Ilmas-MacBook-Air contracts % EOF
+zsh: command not found: EOF
+(base) ilmaasif@Ilmas-MacBook-Air contracts % ls
+ComplaintLedger.sol
+(base) ilmaasif@Ilmas-MacBook-Air contracts % cat ComplaintLedger.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ComplaintLedger {
+
+    enum Status {
+        Created,
+        Acknowledged,
+        ProofSubmitted,
+        Resolved,
+        Disputed,
+        Reopened
+    }
+
+    struct Event {
+        Status status;
+        address actor;
+        string  evidenceHash;
+        string  metaHash;
+        uint256 blockTimestamp;
+    }
+
+    struct Complaint {
+        address citizen;
+        string  category;
+        string  locationHash;
+        Event[] history;
+        uint256 confirmVotes;
+        bool    exists;
+    }
+
+    mapping(uint256 => Complaint) private complaints;
+    uint256 public nextComplaintId;
+
+    mapping(uint256 => mapping(address => bool)) public hasVoted;
+
+    uint256 public constant CONFIRM_THRESHOLD = 3;
+
+    event ComplaintFiled(uint256 indexed id, address indexed citizen, string category);
+    event StatusChanged(uint256 indexed id, Status newStatus, address indexed actor, uint256 timestamp);
+
+    function fileComplaint(
+        string calldata category,
+        string calldata locationHash,
+        string calldata evidenceHash
+    ) external returns (uint256) {
+        uint256 id = nextComplaintId++;
+        Complaint storage c = complaints[id];
+        c.citizen = msg.sender;
+        c.category = category;
+        c.locationHash = locationHash;
+        c.exists = true;
+
+        c.history.push(Event({
+            status: Status.Created,
+            actor: msg.sender,
+            evidenceHash: evidenceHash,
+            metaHash: "",
+            blockTimestamp: block.timestamp
+        }));
+
+        emit ComplaintFiled(id, msg.sender, category);
+        emit StatusChanged(id, Status.Created, msg.sender, block.timestamp);
+        return id;
+    }
+
+    function acknowledge(uint256 id) external {
+        Complaint storage c = _getExisting(id);
+        Status current = _currentStatus(c);
+        require(
+            current == Status.Created || current == Status.Reopened,
+            "Illegal transition: can only acknowledge a new or reopened complaint"
+        );
+        _append(c, id, Status.Acknowledged, "", "");
+    }
+
+    function submitProof(
+        uint256 id,
+        string calldata afterEvidenceHash,
+        string calldata metaHash
+    ) external {
+        Complaint storage c = _getExisting(id);
+        Status current = _currentStatus(c);
+        require(
+            current == Status.Acknowledged,
+            "Illegal transition: must be acknowledged before proof can be submitted"
+        );
+        require(bytes(afterEvidenceHash).length > 0, "Evidence hash required - no empty proof");
+
+        _append(c, id, Status.ProofSubmitted, afterEvidenceHash, metaHash);
+
+        c.confirmVotes = 0;
+    }
+
+    function confirmResolution(uint256 id) external {
+        Complaint storage c = _getExisting(id);
+        Status current = _currentStatus(c);
+        require(current == Status.ProofSubmitted, "No pending proof to confirm");
+        require(!hasVoted[id][msg.sender], "Already voted on this proof round");
+
+        hasVoted[id][msg.sender] = true;
+        c.confirmVotes++;
+
+        if (c.confirmVotes >= CONFIRM_THRESHOLD) {
+            _append(c, id, Status.Resolved, "", "");
+        }
+    }
+
+    function disputeResolution(uint256 id, string calldata reasonHash) external {
+        Complaint storage c = _getExisting(id);
+        Status current = _currentStatus(c);
+        require(
+            current == Status.ProofSubmitted || current == Status.Resolved,
+            "Can only dispute a submitted or already-resolved proof"
+        );
+        _append(c, id, Status.Disputed, "", reasonHash);
+    }
+
+    function reopen(uint256 id) external {
+        Complaint storage c = _getExisting(id);
+        Status current = _currentStatus(c);
+        require(current == Status.Disputed, "Can only reopen a disputed complaint");
+        _append(c, id, Status.Reopened, "", "");
+    }
+
+    function getHistory(uint256 id) external view returns (Event[] memory) {
+        return _getExisting(id).history;
+    }
+
+    function getCurrentStatus(uint256 id) external view returns (Status) {
+        return _currentStatus(_getExisting(id));
+    }
+
+    function getComplaintCount() external view returns (uint256) {
+        return nextComplaintId;
+    }
+
+    function _currentStatus(Complaint storage c) internal view returns (Status) {
+        return c.history[c.history.length - 1].status;
+    }
+
+    function _getExisting(uint256 id) internal view returns (Complaint storage) {
+        Complaint storage c = complaints[id];
+        require(c.exists, "Complaint does not exist");
+        return c;
+    }
+
+    function _append(
+        Complaint storage c,
+        uint256 id,
+        Status newStatus,
+        string memory evidenceHash,
+        string memory metaHash
+    ) internal {
+        c.history.push(Event({
+            status: newStatus,
+            actor: msg.sender,
+            evidenceHash: evidenceHash,
+            metaHash: metaHash,
+            blockTimestamp: block.timestamp
+        }));
+        emit StatusChanged(id, newStatus, msg.sender, block.timestamp);
+    }
+}
+(base) ilmaasif@Ilmas-MacBook-Air contracts % cd ..
+npx hardhat compile
+Downloading compiler 0.8.28
+Compiled 1 Solidity file successfully (evm target: paris).
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % pwd
+/Users/ilmaasif/civic-complaint-demo
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % mkdir scripts
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % ls
+artifacts		contracts		ignition		package-lock.json	README.md		test
+cache			hardhat.config.js	node_modules		package.json		scripts
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % cd scripts
+(base) ilmaasif@Ilmas-MacBook-Air scripts % cat > deploy.js << 'EOF'
+const hre = require("hardhat");
+
+async function main() {
+  const Ledger = await hre.ethers.getContractFactory("ComplaintLedger");
+  const ledger = await Ledger.deploy();
+  await ledger.waitForDeployment();
+  console.log("Deployed to:", await ledger.getAddress());
+}
+
+main().catch(console.error);
+EOF
+(base) ilmaasif@Ilmas-MacBook-Air scripts % EOF
+zsh: command not found: EOF
+(base) ilmaasif@Ilmas-MacBook-Air scripts % cat deploy.js
+const hre = require("hardhat");
+
+async function main() {
+  const Ledger = await hre.ethers.getContractFactory("ComplaintLedger");
+  const ledger = await Ledger.deploy();
+  await ledger.waitForDeployment();
+  console.log("Deployed to:", await ledger.getAddress());
+}
+
+main().catch(console.error);
+(base) ilmaasif@Ilmas-MacBook-Air scripts % cd ..
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % pwd
+/Users/ilmaasif/civic-complaint-demo
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % npx hardhat node
+Started HTTP and WebSocket JSON-RPC server at http://127.0.0.1:8545/
+
+Accounts
+========
+
+WARNING: These accounts, and their private keys, are publicly known.
+Any funds sent to them on Mainnet or any other live network WILL BE LOST.
+
+Account #0: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 (10000 ETH)
+Private Key: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+
+Account #1: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 (10000 ETH)
+Private Key: 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
+
+Account #2: 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC (10000 ETH)
+Private Key: 0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a
+
+Account #3: 0x90F79bf6EB2c4f870365E785982E1f101E93b906 (10000 ETH)
+Private Key: 0x7c852118294e51e653712a81e05800f419141751be58f605c371e15141b007a6
+
+Account #4: 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 (10000 ETH)
+Private Key: 0x47e179ec197488593b187f80a00eb0da91f1b9d0b13f8733639f19c30a34926a
+
+Account #5: 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc (10000 ETH)
+Private Key: 0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba
+
+Account #6: 0x976EA74026E726554dB657fA54763abd0C3a0aa9 (10000 ETH)
+Private Key: 0x92db14e403b83dfe3df233f83dfa3a0d7096f21ca9b0d6d6b8d88b2b4ec1564e
+
+Account #7: 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955 (10000 ETH)
+Private Key: 0x4bbbf85ce3377467afe5d46f804f221813b2bb87f24d81f60f1fcdbf7cbf4356
+
+Account #8: 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f (10000 ETH)
+Private Key: 0xdbda1821b80551c9d65939329250298aa3472ba22feea921c0cf5d620ea67b97
+
+Account #9: 0xa0Ee7A142d267C1f36714E4a8F75612F20a79720 (10000 ETH)
+Private Key: 0x2a871d0798f97d79848a013d4936a73bf4cc922c825d33c1cf7073dff6d409c6
+
+Account #10: 0xBcd4042DE499D14e55001CcbB24a551F3b954096 (10000 ETH)
+Private Key: 0xf214f2b2cd398c806f84e317254e0f0b801d0643303237d97a22a48e01628897
+
+Account #11: 0x71bE63f3384f5fb98995898A86B02Fb2426c5788 (10000 ETH)
+Private Key: 0x701b615bbdfb9de65240bc28bd21bbc0d996645a3dd57e7b12bc2bdf6f192c82
+
+Account #12: 0xFABB0ac9d68B0B445fB7357272Ff202C5651694a (10000 ETH)
+Private Key: 0xa267530f49f8280200edf313ee7af6b827f2a8bce2897751d06a843f644967b1
+
+Account #13: 0x1CBd3b2770909D4e10f157cABC84C7264073C9Ec (10000 ETH)
+Private Key: 0x47c99abed3324a2707c28affff1267e45918ec8c3f20b8aa892e8b065d2942dd
+
+Account #14: 0xdF3e18d64BC6A983f673Ab319CCaE4f1a57C7097 (10000 ETH)
+Private Key: 0xc526ee95bf44d8fc405a158bb884d9d1238d99f0612e9f33d006bb0789009aaa
+
+Account #15: 0xcd3B766CCDd6AE721141F452C550Ca635964ce71 (10000 ETH)
+Private Key: 0x8166f546bab6da521a8369cab06c5d2b9e46670292d85c875ee9ec20e84ffb61
+
+Account #16: 0x2546BcD3c84621e976D8185a91A922aE77ECEc30 (10000 ETH)
+Private Key: 0xea6c44ac03bff858b476bba40716402b03e41b8e97e276d1baec7c37d42484a0
+
+Account #17: 0xbDA5747bFD65F08deb54cb465eB87D40e51B197E (10000 ETH)
+Private Key: 0x689af8efa8c651a91ad287602527f3af2fe9f6501a7ac4b061667b5a93e037fd
+
+Account #18: 0xdD2FD4581271e230360230F9337D5c0430Bf44C0 (10000 ETH)
+Private Key: 0xde9be858da4a475276426320d5e9262ecfc3ba460bfac56360bfa6c4c28b4ee0
+
+Account #19: 0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199 (10000 ETH)
+Private Key: 0xdf57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e
+
+WARNING: These accounts, and their private keys, are publicly known.
+Any funds sent to them on Mainnet or any other live network WILL BE LOST.
+
+eth_accounts
+hardhat_metadata (20)
+eth_blockNumber
+eth_getBlockByNumber
+eth_feeHistory
+eth_maxPriorityFeePerGas
+eth_sendTransaction
+  Contract deployment: ComplaintLedger
+  Contract address:    0x5fbdb2315678afecb367f032d93f642f64180aa3
+  Transaction:         0xd10a9523310640d06806d37516bb2009a07e9c58a743a09c40c84cd1e2288590
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  Value:               0 ETH
+  Gas used:            1835712 of 16777216
+  Block #1:            0x20390af78c20cc443edcb1d8173068353e233c1ea2aa1bdcd0af30681c1a0493
+
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_accounts
+hardhat_metadata (20)
+eth_accounts
+hardhat_metadata (20)
+eth_blockNumber
+eth_getBlockByNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract call:       ComplaintLedger#fileComplaint
+  Transaction:         0x1dec75600ff1b1b28e220e4cfec297a70542b4fd676e193b362ca38fb39002ea
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0x5fbdb2315678afecb367f032d93f642f64180aa3
+  Value:               0 ETH
+  Gas used:            233858 of 16777216
+  Block #2:            0xdfe88c1450eef3b7b7fdd445c8ff8cebb80536d40de1548d7d44d9f663ba3b42
+
+eth_getTransactionByHash
+eth_call
+  Contract call:       ComplaintLedger#getCurrentStatus
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0x5fbdb2315678afecb367f032d93f642f64180aa3
+
+

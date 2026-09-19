@@ -1,0 +1,62 @@
+Last login: Tue Sep 15 13:36:52 on ttys000
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % npx hardhat run scripts/deploy.js --network localhost
+Deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % npx hardhat console --network localhost
+Welcome to Node.js v24.19.0.
+Type ".help" for more information.
+> const Ledger = await ethers.getContractFactory("ComplaintLedger")
+undefined
+> const ledger = await Ledger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa")
+undefined
+> ledger.target
+'0x5FbDB2315678afecb367f032d93F642f64180aa'
+> const ledger = await Ledger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3")
+Uncaught SyntaxError: Identifier 'ledger' has already been declared
+> .exit
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % npx hardhat console --network localhost
+
+Welcome to Node.js v24.19.0.
+Type ".help" for more information.
+> const Ledger = await ethers.getContractFactory("ComplaintLedger")
+undefined
+> const ledger = await Ledger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3")
+undefined
+> await ledger.fileComplaint("pothole", "hash_loc_1", "hash_photo_1")
+ContractTransactionResponse {
+  provider: HardhatEthersProvider {
+    _hardhatProvider: LazyInitializationProviderAdapter {
+      _providerFactory: [AsyncFunction (anonymous)],
+      provider: [BackwardsCompatibilityProviderAdapter],
+      _emitter: [EventEmitter],
+      _initializingPromise: [Promise]
+    },
+    _networkName: 'localhost',
+    _blockListeners: [],
+    _transactionHashListeners: Map(0) {},
+    _eventListeners: []
+  },
+  blockNumber: 2,
+  blockHash: '0xdfe88c1450eef3b7b7fdd445c8ff8cebb80536d40de1548d7d44d9f663ba3b42',
+  index: undefined,
+  hash: '0x1dec75600ff1b1b28e220e4cfec297a70542b4fd676e193b362ca38fb39002ea',
+  type: 2,
+  to: '0x5FbDB2315678afecb367f032d93F642f64180aa3',
+  from: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  nonce: 1,
+  gasLimit: 16777216n,
+  gasPrice: 977464589n,
+  maxPriorityFeePerGas: 232421875n,
+  maxFeePerGas: 977464589n,
+  maxFeePerBlobGas: null,
+  data: '0x2227454c000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e00000000000000000000000000000000000000000000000000000000000000007706f74686f6c6500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a686173685f6c6f635f3100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c686173685f70686f746f5f310000000000000000000000000000000000000000',
+  value: 0n,
+  chainId: 31337n,
+  signature: Signature { r: 0xead83e01b62e492f342ad0dd2cb93716b1c482267e166a9124439c78f068db61, s: 0x44e444209e04a287a02e4d535cde07e6a5e0be9629edc26a3520e242bcab1a33, v: 27 },
+  accessList: [],
+  blobVersionedHashes: null,
+  authorizationList: null
+}
+> await ledger.getCurrentStatus(0)
+0n
+> .exit
+(base) ilmaasif@Ilmas-MacBook-Air civic-complaint-demo % 
